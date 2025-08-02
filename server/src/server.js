@@ -3,6 +3,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import routes from './routes/routes.js'
 import cors from 'cors'
+import errorHandler from './middlewares/errorHandle.js'
 
 
 dotenv.config()
@@ -30,6 +31,9 @@ mongoose.connect(process.env.DATABASE_URL)
     .catch(()=> {
         console.log('DataBase is not connected')
     })
+
+// Error Handler
+app.use(errorHandler)
 
 // Server
 app.on('DataBase', () => {

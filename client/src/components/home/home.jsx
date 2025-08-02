@@ -18,33 +18,35 @@ const Home = () => {
         navigate('/login');
     };
     return (
-        <div className="home-container">
-            <header className="home-header">
-                {/* <h1>Bem-vindo, {username}!</h1> */}
-                <h1>Bem-vindo</h1>
-                {/* <button onClick={handleLogout} className="logout-btn">Sair</button> */}
-                <a href="/login">Sair</a>
-                {/* <Link to={"/login"}>Login</Link>   */}
-            </header>
+    <div className="home-container">
+      <header className="home-header">
+        <h1>Minha Plataforma</h1>
+        <a href="/login" className="logout-btn">Sair</a>
+      </header>
 
-            <main className="home-content">
-                <h2>Página Inicial</h2>
-                <p>Você está logado com sucesso no sistema.</p>
+      <main className="home-content">
+        <h2>Página Inicial</h2>
+        <p>Você está logado com sucesso no sistema.</p>
 
-                <div className="features">
-                    <div className="feature-card">
-                        <h3>Meu Perfil</h3>
-                        <p>Gerencie suas informações pessoais</p>
-                    </div>
+        <div className="features">
+          <div className="feature-card">
+            <h3>Meu Perfil</h3>
+            <p>Gerencie suas informações pessoais.</p>
+          </div>
 
-                    <div className="feature-card">
-                        <h3>Configurações</h3>
-                        <p>Personalize sua experiência</p>
-                    </div>
-                </div>
-            </main>
+          <div className="feature-card">
+            <h3>Configurações</h3>
+            <p>Personalize sua experiência.</p>
+          </div>
         </div>
-    );
+      </main>
+
+      <footer>
+        © 2025 Minha Plataforma. Todos os direitos reservados.
+      </footer>
+    </div>
+  );
+
 };
 
 export default Home;
