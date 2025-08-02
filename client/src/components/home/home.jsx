@@ -3,25 +3,28 @@ import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
-    // VERIFICA SE O USUÁRIO ESTÁ LOGADO
-    useEffect(() => {
-        if (!localStorage.getItem('token')) {
-            navigate('/login', { replace: true });
-        }
-    }, [navigate]);
+    // // VERIFICA SE O USUÁRIO ESTÁ LOGADO
+    // useEffect(() => {
+    //     if (!localStorage.getItem('token')) {
+    //         navigate('/login', { replace: true });
+    //     }
+    // }, [navigate]);
 
     const handleLogout = () => {
-        localStorage.removeItem('token');
-        localStorage.removeItem('username');
+        // localStorage.removeItem('token');
+        // localStorage.removeItem('username');
         navigate('/login');
     };
     return (
         <div className="home-container">
             <header className="home-header">
-                <h1>Bem-vindo, {username}!</h1>
-                <button onClick={handleLogout} className="logout-btn">Sair</button>
+                {/* <h1>Bem-vindo, {username}!</h1> */}
+                <h1>Bem-vindo</h1>
+                {/* <button onClick={handleLogout} className="logout-btn">Sair</button> */}
+                <a href="/login">Sair</a>
+                {/* <Link to={"/login"}>Login</Link>   */}
             </header>
 
             <main className="home-content">
@@ -45,3 +48,7 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+
