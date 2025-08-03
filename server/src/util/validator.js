@@ -1,13 +1,13 @@
 import joi from  'joi'
 
-const userScheme = joi.object({
+const userSchema = joi.object({
     name: joi.string().min(3).required(),
     email: joi.string().email().required(),
     password: joi.string().min(6).required()
 })
 
 const validateUser = (req, res, next) => {
-    const { error } = userScheme.validate(req.body)
+    const { error } = userSchema.validate(req.body)
     if(error){
         return res.status(400).json({
             status: 400,
